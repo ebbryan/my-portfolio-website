@@ -1,11 +1,8 @@
 import React from "react";
 
-export const SiteAboutMeSection = ({ id }: { id: string }) => {
+export const SiteAboutMeSection = () => {
   return (
-    <section
-      id={id}
-      className="flex justify-center items-center h-screen bg-black min-h-screen"
-    >
+    <section className="flex justify-center items-center h-screen bg-black min-h-screen">
       <div>Inner div</div>
     </section>
   );
