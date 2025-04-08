@@ -8,6 +8,7 @@ import { TechStack } from "./components/TechStack";
 export const SiteHeroSection = () => {
   const techStacks = [
     { stack: "NextJS", years: "3 Years" },
+    { stack: "TailwindCSS", years: "2 Years" },
     { stack: "Directus CMS", years: "1 Year" },
   ] as {
     stack: string;
@@ -44,15 +45,14 @@ export const SiteHeroSection = () => {
           </article>
           {/* STACKS HERE */}
         </div>
-        <div>
-          <Image
-            alt="Hero"
-            src={"/static/MyImage.png"}
-            width={isLg}
-            height={isLg}
-            className="hover:scale-105 hover:cursor-pointer transition-all"
-          />
-        </div>
+
+        <Image
+          alt="Hero"
+          src={"/static/MyImage.png"}
+          width={isLg}
+          height={isLg}
+          className="hover:scale-105 hover:cursor-pointer transition-all"
+        />
       </div>
     </section>
   );
