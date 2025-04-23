@@ -6,7 +6,7 @@ export const LogoTitle = ({
   isClickable = false,
 }: {
   onLogoClick?: () => void;
-  fontSize: string;
+  fontSize: "text-2xl" | "text-lg";
   isClickable?: boolean;
 }) => {
   return (

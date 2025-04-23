@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { inter } from "./fonts/fonts";
+import { SiteNavigation } from "@/components/SiteNavigation";
+import BackgroundProvider from "@/components/BackgroundProvider";
 
 export const metadata: Metadata = {
   title: "Earl.Dev",
@@ -14,7 +16,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} antialiased`}>{children}</body>
+      <body className={`${inter.variable} antialiased`}>
+        <BackgroundProvider>
+          <SiteNavigation />
+          {children}
+        </BackgroundProvider>
+      </body>
     </html>
   );
 }

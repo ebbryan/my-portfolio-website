@@ -5,7 +5,6 @@ import { SiteNavigation } from "@/components/SiteNavigation";
 export default function Home() {
   return (
     <>
-      <SiteNavigation />
       <SiteHeroSection />
     </>
   );
