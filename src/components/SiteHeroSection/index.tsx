@@ -4,11 +4,12 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import useIsLgScreen from "@/hooks/useLGScreen";
 import { TechStack } from "./components/TechStack";
+import { Button } from "../ui/button";
 
 export const SiteHeroSection = () => {
   const techStacks = [
     { stack: "NextJS", years: "3 Years" },
-    { stack: "TailwindCSS", years: "2 Years" },
+    { stack: "TailwindCSS", years: "1 Year" },
     { stack: "Directus CMS", years: "1 Year" },
   ] as {
     stack: string;
@@ -19,7 +20,7 @@ export const SiteHeroSection = () => {
   const [isLg, setIsLg] = useState(390);
 
   useEffect(() => {
-    setIsLg(!isLG ? 170 : 390);
+    setIsLg(!isLG ? 220 : 390);
   }, [isLG]);
   return (
     <section className="flex justify-center items-center h-screen min-h-screen">
@@ -34,7 +35,7 @@ export const SiteHeroSection = () => {
           {/* <LogoTitle fontSize="text-4xl" /> */}
           <h1 className="text-2xl ">Junior Fullstack Developer</h1>
           {/* STACKS HERE */}
-          <article className="flex items-center gap-3 flex-wrap">
+          <article className="flex flex-col items-center gap-3 w-full">
             {techStacks.map((item) => (
               <TechStack
                 stack={item.stack}
@@ -42,6 +43,7 @@ export const SiteHeroSection = () => {
                 key={item.stack}
               />
             ))}
+            <Button variant={"link"}>See more</Button>
           </article>
           {/* STACKS HERE */}
         </div>

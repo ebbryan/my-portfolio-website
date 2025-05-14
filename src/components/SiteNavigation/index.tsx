@@ -2,10 +2,20 @@
 
 import React, { MouseEventHandler } from "react";
 import { LogoTitle } from "../ConstantComponents/Logo";
-import { Mail } from "lucide-react";
+import { Mail, Menu } from "lucide-react";
 import useIsLgScreen from "@/hooks/useLGScreen";
 import { Button } from "../ui/button";
-import { useRouter } from "next/navigation";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "../ui/sheet";
+import useDisclosure from "@/hooks/useDisclosure";
+import { useRouter } from "@bprogress/next";
+import { usePathname } from "next/navigation";
 
 type NavLinksType = {
   id: number;
@@ -27,15 +37,20 @@ const NavButton: React.FC<NavLinksType> = (props) => {
 };
 
 export const SiteNavigation = () => {
+  const router = useRouter();
+  const isLG = useIsLgScreen();
+  const { isOpen, onToggle } = useDisclosure();
+  const pathname = usePathname();
+
   const navLinks = [
     { id: 1, navTitle: "About me", navPath: "/about-me" },
     { id: 2, navTitle: "Projects", navPath: "/projects" },
   ] as NavLinksType[];
 
-  const router = useRouter();
-
-  const isLG = useIsLgScreen();
-  console.log("🚀 ~ SiteNavigation ~ isLG:", isLG);
+  const onNavigate = (path: string) => {
+    router.push(path);
+    onToggle();
+  };
 
   return (
     <nav
@@ -51,7 +66,9 @@ export const SiteNavigation = () => {
           <div className="flex gap-5">
             {navLinks.map((item) => (
               <button
-                className="hover:text-orange-500"
+                className={`hover:text-orange-500 ${
+                  pathname === item.navPath ? `text-orange-500` : ``
+                }`}
                 onClick={() => router.push(item.navPath)}
                 key={item.id}
               >
@@ -63,7 +80,43 @@ export const SiteNavigation = () => {
             <Mail />
             Message me!
           </Button>
-          {/* <button className="text-white active:scale-95 hover:text-black bg-orange-500 hover:bg-white p-4 px-7 rounded-md transition-all flex items-center gap-3"></button> */}
+        </>
+      )}
+      {!isLG && (
+        <>
+          <Sheet open={isOpen} onOpenChange={onToggle}>
+            <SheetTrigger asChild>
+              <Button variant={"ghost"} size={"lg"}>
+                <Menu />
+              </Button>
+            </SheetTrigger>
+            <SheetContent>
+              <SheetHeader>
+                <SheetTitle>
+                  <LogoTitle
+                    onLogoClick={() => onNavigate("/")}
+                    fontSize="text-2xl"
+                    isClickable={true}
+                  />
+                </SheetTitle>
+                <SheetDescription>
+                  <div className="mt-5 flex flex-col items-start justify-start gap-5">
+                    {navLinks.map((item) => (
+                      <button
+                        className={`hover:text-orange-500 text-lg ${
+                          pathname === item.navPath ? `text-orange-500` : ``
+                        }`}
+                        onClick={() => onNavigate(item.navPath)}
+                        key={item.id}
+                      >
+                        {item.navTitle}
+                      </button>
+                    ))}
+                  </div>
+                </SheetDescription>
+              </SheetHeader>
+            </SheetContent>
+          </Sheet>
         </>
       )}
     </nav>

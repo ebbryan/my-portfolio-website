@@ -3,6 +3,7 @@ import "./globals.css";
 import { inter } from "./fonts/fonts";
 import { SiteNavigation } from "@/components/SiteNavigation";
 import BackgroundProvider from "@/components/BackgroundProvider";
+import ProgressBarProvider from "@/components/Providers/ProgressBarProvider";
 
 export const metadata: Metadata = {
   title: "Earl.Dev",
@@ -18,8 +19,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} antialiased`}>
         <BackgroundProvider>
-          <SiteNavigation />
-          {children}
+          <ProgressBarProvider>
+            <SiteNavigation />
+            {children}
+          </ProgressBarProvider>
         </BackgroundProvider>
       </body>
     </html>
