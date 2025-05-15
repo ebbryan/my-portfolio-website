@@ -10,7 +10,7 @@ const PageContent = () => {
     <>
       <SiteHeroSection />
       <SiteAboutMeSection />
-      <SiteProjectsSection />
+      {/* <SiteProjectsSection /> */}
       <ScrollToTop smooth width={"100%"} className="p-2" />
     </>
   );
