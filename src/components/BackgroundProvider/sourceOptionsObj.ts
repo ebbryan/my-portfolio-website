@@ -17,12 +17,12 @@ export const settingOptions = {
   particles: {
     links: {
       enable: true,
-      distance: 100,
-      opacity: 0,
+      distance: 10,
+      opacity: 1,
       color: "#000",
     },
     number: {
-      value: 150,
+      value: 190,
     },
     move: {
       enable: true,
@@ -30,13 +30,13 @@ export const settingOptions = {
       speed: 1,
     },
     size: {
-      value: 1,
+      value: 0.10,
     },
     opacity: {
-      value: 0.2,
+      value: 1,
     },
     color: {
-      value: "#000",
+      value: "#f97316",
     },
   },
   interactivity: {
@@ -45,7 +45,7 @@ export const settingOptions = {
         enable: true,
         parallax: {
           enable: true,
-          force: 30,
+          force: 80,
         },
         mode: "connect",
       },
@@ -53,7 +53,7 @@ export const settingOptions = {
     modes: {
       connect: {
         links: {
-          opacity: 0.11,
+          opacity: 0.09,
         },
         radius: 130,
         distance: 80,

@@ -54,75 +54,17 @@ export const SiteNavigation = () => {
 
   return (
     <nav
-      className={`flex items-center justify-between py-4 px-6 fixed w-full bg-white shadow-sm`}
+      className={`flex items-center justify-between py-4 px-6 bg-white fixed w-full`}
     >
       <LogoTitle
         onLogoClick={() => router.push("/")}
         fontSize="text-2xl"
         isClickable={true}
       />
-      {!!isLG && (
-        <>
-          <div className="flex gap-5">
-            {navLinks.map((item) => (
-              <button
-                className={`hover:text-orange-500 ${
-                  pathname === item.navPath ? `text-orange-500` : ``
-                }`}
-                onClick={() => router.push(item.navPath)}
-                key={item.id}
-              >
-                {item.navTitle}
-              </button>
-            ))}
-          </div>
-          <Button size={"lg"}>
-            <Mail />
-            Message me!
-          </Button>
-        </>
-      )}
-      {!isLG && (
-        <>
-          <Sheet open={isOpen} onOpenChange={onToggle}>
-            <SheetTrigger asChild>
-              <Button variant={"ghost"} size={"lg"}>
-                <Menu />
-              </Button>
-            </SheetTrigger>
-            <SheetContent>
-              <SheetHeader>
-                <SheetTitle>
-                  <LogoTitle
-                    onLogoClick={() => onNavigate("/")}
-                    fontSize="text-2xl"
-                    isClickable={true}
-                  />
-                </SheetTitle>
-                <SheetDescription>
-                  <div className="mt-5 flex flex-col items-start justify-start gap-5">
-                    {navLinks.map((item) => (
-                      <button
-                        className={`hover:text-orange-500 text-lg ${
-                          pathname === item.navPath ? `text-orange-500` : ``
-                        }`}
-                        onClick={() => onNavigate(item.navPath)}
-                        key={item.id}
-                      >
-                        {item.navTitle}
-                      </button>
-                    ))}
-                    <Button size={"lg"}>
-                      <Mail />
-                      Message me!
-                    </Button>
-                  </div>
-                </SheetDescription>
-              </SheetHeader>
-            </SheetContent>
-          </Sheet>
-        </>
-      )}
+      <Button size={"lg"}>
+        <Mail />
+        Message me!
+      </Button>
     </nav>
   );
 };

@@ -1,11 +1,5 @@
-import SiteAboutMeSection from "@/components/SiteAboutMeSection";
-import { SiteHeroSection } from "@/components/SiteHeroSection";
+import PageContent from "./pageContent";
 
 export default function Home() {
-  return (
-    <>
-      <SiteHeroSection />
-      <SiteAboutMeSection />
-    </>
-  );
+  return <PageContent />;
 }

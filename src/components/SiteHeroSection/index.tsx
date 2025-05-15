@@ -22,8 +22,8 @@ export const SiteHeroSection = () => {
     setIsLg(!isLG ? 220 : 390);
   }, [isLG]);
   return (
-    <section className="flex justify-center items-center h-screen min-h-screen">
-      <div className="flex flex-col-reverse lg:flex-row items-center gap-5 w-full justify-center">
+    <section className="flex flex-col justify-center items-center h-screen">
+      <div className="flex flex-col-reverse lg:flex-row items-center gap-5 w-full h-screen justify-center">
         <div className="flex flex-col items-center lg:items-end gap-4">
           <div className="flex flex-col items-center lg:items-end">
             <h1 className="hidden lg:block lg:-mb-4">Hi! I am</h1>
@@ -53,7 +53,7 @@ export const SiteHeroSection = () => {
           src={"/static/MyImage.png"}
           width={isLg}
           height={isLg}
-          className="hover:scale-105 hover:cursor-pointer transition-all"
+          className="transition-all"
         />
       </div>
     </section>

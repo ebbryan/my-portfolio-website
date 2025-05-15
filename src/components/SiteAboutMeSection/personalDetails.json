@@ -1,0 +1,49 @@
+{
+  "name": "Earl Bryan",
+  "bio": "I'm a passionate frontend developer and IT Technical Support Level 1 with a focus on building responsive, user-friendly web apps.",
+  "location": "Manila, Philippines",
+  "email": "earlbryanburaay@gmail.com",
+  "phone": "+63 945 110 4436",
+  "socials": {
+    "github": "https://github.com/earlbryan",
+    "linkedin": "https://linkedin.com/in/earlbryan"
+  },
+  "skills": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Tailwind CSS"
+  ],
+  "experience": {
+    "currentRole": "Frontend Developer / IT Technical Support Level 1",
+    "years": 3,
+    "availableFor": "Full-time or freelance"
+  },
+  "resume": {
+    "url": "/resume.pdf",
+    "label": "Download CV"
+  },
+  "profileImage": "/images/profile.jpg",
+  "languages": ["English", "Filipino"],
+  "certifications": [
+    "Google UX Design Certificate",
+    "Frontend Mentor – Advanced Challenges"
+  ],
+  "basicInfo": {
+    "Full Name": "Earl Bryan Serenio Bura-ay",
+    "Date of Birth": "July 20, 1997",
+    "Gender / Sex": "Male",
+    "Nationality": "Filipino",
+    "Marital Status": "Single"
+  },
+  "contactInfo": {
+    "Phone Number": "+63 945 110 4436",
+    "Email Address": "earlbryanburaay@gmail.com",
+    "Home Address": "Blk 2 Lot 13 Salangsang Village Guinto St.",
+    "Country / State / City": "Philippines, South Cot, General Santos City",
+    "Postal Code / ZIP Code": "9500"
+  }
+}

@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { inter } from "./fonts/fonts";
 import { SiteNavigation } from "@/components/SiteNavigation";
 import BackgroundProvider from "@/components/BackgroundProvider";
 import ProgressBarProvider from "@/components/Providers/ProgressBarProvider";
+
+import { Inter } from "next/font/google";
+import DefaultLayout from "./DefaultLayout";
+
+const interFont = Inter({
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Earl.Dev",
@@ -17,13 +23,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} antialiased`}>
-        <BackgroundProvider>
+      <body className={`${interFont.className} antialiased`}>
+        <DefaultLayout>
           <ProgressBarProvider>
             <SiteNavigation />
             {children}
           </ProgressBarProvider>
-        </BackgroundProvider>
+        </DefaultLayout>
       </body>
     </html>
   );
