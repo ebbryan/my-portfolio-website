@@ -2,7 +2,6 @@
 
 import SiteAboutMeSection from "@/components/SiteAboutMeSection";
 import { SiteHeroSection } from "@/components/SiteHeroSection";
-import SiteProjectsSection from "@/components/SiteProjectsSection";
 import ScrollToTop from "react-scroll-to-top";
 
 const PageContent = () => {

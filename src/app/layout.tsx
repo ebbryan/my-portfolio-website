@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { SiteNavigation } from "@/components/SiteNavigation";
-import BackgroundProvider from "@/components/BackgroundProvider";
 import ProgressBarProvider from "@/components/Providers/ProgressBarProvider";
 
 import { Inter } from "next/font/google";
