@@ -112,6 +112,10 @@ export const SiteNavigation = () => {
                         {item.navTitle}
                       </button>
                     ))}
+                    <Button size={"lg"}>
+                      <Mail />
+                      Message me!
+                    </Button>
                   </div>
                 </SheetDescription>
               </SheetHeader>

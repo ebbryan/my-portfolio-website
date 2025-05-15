@@ -9,8 +9,7 @@ import { Button } from "../ui/button";
 export const SiteHeroSection = () => {
   const techStacks = [
     { stack: "NextJS", years: "3 Years" },
-    { stack: "TailwindCSS", years: "1 Year" },
-    { stack: "Directus CMS", years: "1 Year" },
+    { stack: "TailwindCSS", years: "2 Years" },
   ] as {
     stack: string;
     years: string;
@@ -32,19 +31,20 @@ export const SiteHeroSection = () => {
               Earl <span className="text-orange-500">Bryan</span>
             </h1>
           </div>
-          {/* <LogoTitle fontSize="text-4xl" /> */}
-          <h1 className="text-2xl ">Junior Fullstack Developer</h1>
+          <h1 className="text-2xl ">Junior Frontend Developer</h1>
           {/* STACKS HERE */}
-          <article className="flex flex-col items-center gap-3 w-full">
-            {techStacks.map((item) => (
-              <TechStack
-                stack={item.stack}
-                years={item.years}
-                key={item.stack}
-              />
-            ))}
+          <div className="w-full flex flex-col lg:items-end">
+            <article className="flex flex-col items-center gap-3 w-full lg:flex-row">
+              {techStacks.map((item) => (
+                <TechStack
+                  stack={item.stack}
+                  years={item.years}
+                  key={item.stack}
+                />
+              ))}
+            </article>
             <Button variant={"link"}>See more</Button>
-          </article>
+          </div>
           {/* STACKS HERE */}
         </div>
 
