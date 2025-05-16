@@ -43,7 +43,6 @@ export const SiteHeroSection = () => {
                 />
               ))}
             </article>
-            <Button variant={"link"}>See more</Button>
           </div>
           {/* STACKS HERE */}
         </div>
