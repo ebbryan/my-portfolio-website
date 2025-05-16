@@ -10,9 +10,10 @@ const SiteAboutMeSection = () => {
   return (
     <section className="flex justify-center items-center min-h-screen p-5">
       <div className="w-full bg-white/60 flex flex-col gap-3">
-        <div className="flex flex-col items-start justify-start">
-          <h1 className="text-4xl font-black flex gap-3 flex-col md:flex-row">
-            About Me
+        <div className="flex items-center justify-center md:items-start md:justify-start">
+          <h1 className="text-4xl font-black flex gap-3 text-center">
+            About
+            <span className="text-orange-500">Me</span>
           </h1>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">

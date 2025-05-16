@@ -11,14 +11,15 @@ export const SiteNavigation = () => {
 
   return (
     <nav
-      className={`flex items-center justify-between py-4 px-6 bg-white fixed w-full`}
-    >
+  className={`flex items-center justify-between py-4 px-6 md:px-16 fixed w-full 
+              bg-white/30 backdrop-blur-lg border-b border-white/20`}
+>
       <LogoTitle
         onLogoClick={() => router.push("/")}
         fontSize="text-2xl"
         isClickable={true}
       />
-      <Button size={"lg"}>
+      <Button size={"sm"}>
         <Mail />
         Message me!
       </Button>
