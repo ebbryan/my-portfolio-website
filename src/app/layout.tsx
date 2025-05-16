@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: "Earl.Dev",
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_URL}/images/og-image.png`,
+        url: `${process.env.NEXT_PUBLIC_URL}/static/og-image.png`,
         width: 900,
         height: 800,
         alt: "og-image",
