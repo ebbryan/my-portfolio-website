@@ -56,15 +56,15 @@ const SiteProjectsSection = () => {
             <span className="text-orange-500">Projects</span>
           </h1>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-4">
           {projects.map((project, index) => (
             <Card key={index} className={`${isLG ? `hover:scale-105` : ``} transition-all`}>
               <CardHeader>
                 <CardTitle className="text-xl text-center md:text-left">{project.title}</CardTitle>
-                <CardDescription className="h-full md:h-[20vh]">{project.description}</CardDescription>
+                <CardDescription className="h-full lg:h-[20vh]">{project.description}</CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="space-y-2 h-[20vh] flex flex-row items-center justify-center">
+                <div className="space-y-2 lg:h-[20vh] flex flex-row items-center justify-center">
                   <Image
                     alt={project.image.alt}
                     src={project.image.src}
@@ -74,7 +74,7 @@ const SiteProjectsSection = () => {
                   />
                 </div>
               </CardContent>
-              <CardFooter>
+              <CardFooter className="flex items-center justify-end">
                 <Button asChild>
                   <a
                     href={project.link.url}

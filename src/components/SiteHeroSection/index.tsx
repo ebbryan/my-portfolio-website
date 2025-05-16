@@ -30,7 +30,7 @@ export const SiteHeroSection = () => {
               Earl <span className="text-orange-500">Bryan</span>
             </h1>
           </div>
-          <h1 className="text-lg md:text-2xl">Junior Frontend Developer</h1>
+          <h1 className="text-lg text-center md:text-2xl lg:text-right">Junior Frontend Developer<br/>IT Support Level 1</h1>
           {/* STACKS HERE */}
           <div className="w-full flex flex-col lg:items-end">
             <article className="flex flex-col items-center gap-3 w-full lg:flex-row">
