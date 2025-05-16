@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import useIsLgScreen from "@/hooks/useLGScreen";
 import { TechStack } from "./components/TechStack";
-import { Button } from "../ui/button";
 
 export const SiteHeroSection = () => {
   const techStacks = [
