@@ -12,8 +12,25 @@ const interFont = Inter({
 
 export const metadata: Metadata = {
   title: "Earl.Dev",
-  description: "Portfolio Website",
+  description: "Online Portfolio Website",
+  openGraph: {
+    title: "Earl.Dev",
+    description: "Online Portfolio Website",
+    url: process.env.NEXT_PUBLIC_URL,
+    siteName: "Earl.Dev",
+    images: [
+      {
+        url: `${process.env.NEXT_PUBLIC_URL}/images/og-image.png`,
+        width: 900,
+        height: 800,
+        alt: "og-image",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
+
 
 export default function RootLayout({
   children,
